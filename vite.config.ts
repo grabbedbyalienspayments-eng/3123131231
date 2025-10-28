@@ -19,10 +19,7 @@ export default defineConfig({
   build: {
     sourcemap: false,
     outDir: 'dist',
-    emptyOutDir: true,
-    rollupOptions: {
-      input: resolve(__dirname, 'index.html')
-    }
+    emptyOutDir: true
   },
   resolve: {
     alias: {
