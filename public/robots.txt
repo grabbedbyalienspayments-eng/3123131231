@@ -1,0 +1,7 @@
+
+User-agent: *
+Allow: /
+Allow: /privacy-policy
+Disallow: /404
+
+Sitemap: https://example.com/sitemap.xml
