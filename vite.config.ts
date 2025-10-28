@@ -1,10 +1,8 @@
 
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-import { resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import path from 'path'
 
-const __dirname = fileURLToPath(new URL('.', import.meta.url))
 const base = process.env.BASE_PATH || '/'
 const isPreview = process.env.IS_PREVIEW ? true : false;
 
@@ -23,7 +21,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src')
+      '@': path.resolve(process.cwd(), './src')
     }
   },
   server: {
